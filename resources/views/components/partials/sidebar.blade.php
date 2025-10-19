@@ -23,10 +23,29 @@
                 <!-- ROLE ADMIN -->
                 @if (request()->is('admin*'))
                     <li class="nav-item">
-                        <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('admin.dashboard') }}"
+                            class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard Admin
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('polis.index') }}"
+                            class="nav-link {{ request()->routeIs('polis.*') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-hospital"></i>
+                            <p>
+                                Manajemen Poli
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('dokter.index') }}"
+                            class="nav-link {{ request()->routeIs('dokter.*') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-user-doctor"></i>
+                            <p>
+                                Manajemen Dokter
                             </p>
                         </a>
                     </li>
@@ -35,7 +54,8 @@
                 <!-- ROLE PASIEN -->
                 @if (request()->is('pasien*'))
                     <li class="nav-item">
-                        <a href="{{ route('pasien.dashboard') }}" class="nav-link {{ request()->routeIs('pasien.dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('pasien.dashboard') }}"
+                            class="nav-link {{ request()->routeIs('pasien.dashboard') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-columns"></i>
                             <p>
                                 Dashboard Pasien
@@ -47,7 +67,8 @@
                 <!-- ROLE DOKTER -->
                 @if (request()->is('dokter*'))
                     <li class="nav-item">
-                        <a href="{{ route('dokter.dashboard') }}" class="nav-link {{ request()->routeIs('dokter.dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('dokter.dashboard') }}"
+                            class="nav-link {{ request()->routeIs('dokter.dashboard') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-columns"></i>
                             <p>
                                 Dashboard Dokter
