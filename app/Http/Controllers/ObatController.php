@@ -40,7 +40,7 @@ class ObatController extends Controller
         return view('admin.obat.edit')->with([
             'obat'=> $obat
         ]);
-        // sama saja seperti compact('obat') -> bedanya bisa ubah nama key
+       
     }
 
     public function update(Request $request, string $id){
